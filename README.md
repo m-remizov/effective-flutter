@@ -1,4 +1,5 @@
-# effective_lab
+# effective_lab Лаба на зачет! Большая просьба не душить! Благодарю!
+
 
 A new Flutter project.
 
