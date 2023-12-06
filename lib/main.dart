@@ -1,3 +1,5 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:effective_lab/page/profile.dart';
 import 'package:effective_lab/widgets/custom_chip.dart';
 import 'package:effective_lab/widgets/header.dart';
@@ -15,8 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [],
-      supportedLocales: [Locale("en")],
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
+      ],
+      supportedLocales: [Locale("en"), Locale("ru")],
       title: 'Flutter Demo',
       theme: ThemeData(
         textTheme: Theme.of(context).textTheme.apply(
@@ -141,11 +148,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     tabs: [
                       Tab(
                         height: 56,
-                        child: Text("Профиль"),
+                        child: Text(AppLocalizations.of(context)!.profile),
                       ),
                       Tab(
                         height: 56,
-                        text: "Настройки",
+                        child: Text(AppLocalizations.of(context)!.settings),
                       )
                     ]),
               )

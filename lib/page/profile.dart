@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:effective_lab/widgets/custom_chip.dart';
 import 'package:effective_lab/widgets/menu_item.dart';
 import 'package:effective_lab/widgets/sub_header.dart';
 import 'package:effective_lab/widgets/subscription.dart';
-import 'package:flutter/material.dart';
 
 const chips = [
   "Еда",
@@ -45,9 +46,8 @@ class Profile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SubHeader(
-                  title: "У вас подключено",
-                  subtitle:
-                      "Подписки, автоплатежи и сервисы на которые вы подписались"),
+                  title: AppLocalizations.of(context)!.connectedTitle,
+                  subtitle: AppLocalizations.of(context)!.connectedSubtitle),
               SizedBox(
                 height: 22,
               ),
@@ -75,23 +75,24 @@ class Profile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SubHeader(
-                  title: "Тарифы и лимиты",
-                  subtitle: "Для операций в Сбербанк Онлайн"),
+                  title: AppLocalizations.of(context)!.tariffsTitile,
+                  subtitle: AppLocalizations.of(context)!.tariffsSubtitile),
               Column(
                 children: [
                   MenuItem(
                     imageUrl: "assets/images/speedometer.png",
-                    title: "Изменить суточный лимит",
-                    subtitle: "На платежи и переводы",
+                    title: AppLocalizations.of(context)!.changeDailyLimitTitile,
+                    subtitle:
+                        AppLocalizations.of(context)!.changeDailyLimitSubtitile,
                   ),
                   MenuItem(
                     imageUrl: "assets/images/percent_unfilled.png",
-                    title: "Переводы без комиссии",
-                    subtitle: "Показать остаток в этом месяце",
+                    title: AppLocalizations.of(context)!.transferTitle,
+                    subtitle: AppLocalizations.of(context)!.transferSubtitle,
                   ),
                   MenuItem(
                     imageUrl: "assets/images/arrows.png",
-                    title: "Информация о тарифах и лимитах",
+                    title: AppLocalizations.of(context)!.limits,
                     subtitle: "",
                   ),
                 ],
@@ -102,11 +103,11 @@ class Profile extends StatelessWidget {
             height: 32,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SubHeader(
-                  title: "Интересы",
-                  subtitle:
-                      "Мы подбираем истории и предложения по темам, которые вам нравятся"),
+                  title: AppLocalizations.of(context)!.intrestingsTitle,
+                  subtitle: AppLocalizations.of(context)!.intrestingsSubtitle),
               SizedBox(height: 16),
               Padding(
                 padding: const EdgeInsets.only(bottom: 32),
